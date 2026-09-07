@@ -1,19 +1,10 @@
 - name: Build And Deploy
-2
 id: builddeploy
-3
 uses: Azure/static-web-apps-deploy@v1
-4
 with:
-5
 azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ORANGE_ROCK_0BB771110 }}
-6
 action: "upload"
-7
 app_location: "/"
-8
 api_location: ""
-9
 output_location: ""
-10
 skip_app_build: true
