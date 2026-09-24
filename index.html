@@ -3,22 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NexaTech Solutions | IT Products, Servers & Cloud Services</title>
-  <meta name="description" content="Shop laptops, servers, networking gear, software licenses and cloud services from NexaTech Solutions — trusted IT products for business." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>" />
+  <title>TekTrixa | Computer, Laptop & IT Product Shop in Bangladesh</title>
+  <meta name="description" content="TekTrixa — shop desktops, laptops, monitors, networking gear, software, servers, gaming, TV and accessories at the best prices in Bangladesh." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- Top bar -->
+  <!-- Top utility bar -->
   <div class="top-bar">
     <div class="container">
-      <div>
+      <div class="tb-left">
         <span>📞 +880 1XXX-XXXXXX</span>
-        <span>✉️ sales@yourcompany.com</span>
+        <span>✉️ sales@tektrixa.com</span>
+        <span>🚚 Free delivery inside Dhaka on orders over ৳5,000</span>
       </div>
-      <div>
-        <span>🚚 Free shipping on orders over $200</span>
+      <div class="tb-right">
+        <a href="contact.html">Track Order</a>
+        <a href="contact.html">Store Locator</a>
+        <a href="contact.html">Help</a>
       </div>
     </div>
   </div>
@@ -26,21 +29,14 @@
   <!-- Navbar -->
   <header class="navbar">
     <div class="container">
-      <a href="index.html" class="logo">
-        <span class="logo-mark">NT</span> NexaTech Solutions
-      </a>
-      <nav class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <a href="index.html" class="logo"><span class="logo-mark">TX</span> TekTrixa</a>
+      <div class="navbar-search">
+        <input type="text" placeholder="Search for laptops, desktops, routers..." class="site-search" onkeydown="if(event.key==='Enter'){window.location.href='products.html?q='+encodeURIComponent(this.value)}" />
+        <button onclick="window.location.href='products.html?q='+encodeURIComponent(document.querySelector('.navbar-search input').value)">🔍</button>
+      </div>
       <div class="nav-actions">
-        <div class="search-box">
-          <span>🔍</span>
-          <input type="text" placeholder="Search products..." class="site-search" onkeydown="if(event.key==='Enter'){window.location.href='products.html?q='+encodeURIComponent(this.value)}" />
-        </div>
-        <a href="cart.html" class="cart-link">🛒<span class="cart-count">0</span></a>
+        <a href="about.html" class="nav-action-item"><span class="icon">👤</span>Account</a>
+        <a href="cart.html" class="nav-action-item"><span class="icon">🛒</span>Cart<span class="cart-count">0</span></a>
         <button class="hamburger" onclick="toggleMobileNav()">☰</button>
       </div>
     </div>
@@ -53,129 +49,210 @@
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
+  <!-- Mega category nav -->
+  <nav class="category-nav">
     <div class="container">
-      <div class="hero-text">
-        <span class="tag">✨ Trusted IT Partner Since 2015</span>
-        <h1>Enterprise IT Products, <span>Delivered Fast.</span></h1>
-        <p>Laptops, servers, networking gear, software licenses and cloud services — everything your business needs, backed by expert support.</p>
-        <div class="hero-cta">
-          <a href="products.html" class="btn btn-accent">Shop Products →</a>
-          <a href="contact.html" class="btn btn-outline">Talk to Sales</a>
-        </div>
-        <div class="hero-stats">
-          <div><strong>1,200+</strong><span>Products Delivered</span></div>
-          <div><strong>500+</strong><span>Business Clients</span></div>
-          <div><strong>10+</strong><span>Years Experience</span></div>
-          <div><strong>24/7</strong><span>Support</span></div>
-        </div>
+      <div class="cat-nav-toggle">☰ All Categories</div>
+      <div class="cat-nav-links">
+        <a href="products.html?cat=desktop">🖥️ Desktop</a>
+        <a href="products.html?cat=laptop">💻 Laptop</a>
+        <a href="products.html?cat=monitor">🖼️ Monitor</a>
+        <a href="products.html?cat=networking">📡 Networking</a>
+        <a href="products.html?cat=camera">📷 Camera & Security</a>
+        <a href="products.html?cat=software">🪟 Software</a>
+        <a href="products.html?cat=server">🗄️ Server & Storage</a>
+        <a href="products.html?cat=gaming">🎮 Gaming</a>
+        <a href="products.html?cat=tv">📺 TV & Appliance</a>
+        <a href="products.html?cat=accessories">🎧 Accessories</a>
       </div>
-      <div class="hero-visual">
-        <div class="hero-card">
-          <div class="mini-icon-box"><div class="icon">💻</div><span>Laptops</span></div>
-          <div class="mini-icon-box"><div class="icon">🖥️</div><span>Servers</span></div>
-          <div class="mini-icon-box"><div class="icon">📡</div><span>Networking</span></div>
-          <div class="mini-icon-box"><div class="icon">☁️</div><span>Cloud</span></div>
+    </div>
+  </nav>
+
+  <!-- Hero Slider -->
+  <section class="hero-slider" style="padding:0;">
+    <div class="hero-slide s1 active">
+      <div class="container">
+        <div class="hero-text">
+          <span class="tag">⚡ Mega Tech Sale — Up to 30% Off</span>
+          <h1>Power Your World with <span>TekTrixa</span></h1>
+          <p>Genuine desktops, laptops, networking gear, servers and gaming rigs — with nationwide delivery and warranty support you can trust.</p>
+          <div class="hero-cta">
+            <a href="products.html" class="btn btn-accent">Shop Now →</a>
+            <a href="contact.html" class="btn btn-outline">Talk to Sales</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-orb-grid">
+            <div class="hero-orb"><div class="icon">💻</div><span>Laptops</span></div>
+            <div class="hero-orb"><div class="icon">🖥️</div><span>Desktops</span></div>
+            <div class="hero-orb"><div class="icon">🎮</div><span>Gaming</span></div>
+            <div class="hero-orb"><div class="icon">📡</div><span>Networking</span></div>
+          </div>
         </div>
       </div>
     </div>
+    <div class="hero-slide s2">
+      <div class="container">
+        <div class="hero-text">
+          <span class="tag">🔥 Hot Deal of the Week</span>
+          <h1>Gaming Laptops <span>Starting ৳62,000</span></h1>
+          <p>RTX-powered performance for gaming, editing and rendering — with free gifts on select models this week only.</p>
+          <div class="hero-cta">
+            <a href="products.html?cat=laptop" class="btn btn-accent">View Gaming Laptops →</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-orb-grid">
+            <div class="hero-orb"><div class="icon">🎁</div><span>Free Gifts</span></div>
+            <div class="hero-orb"><div class="icon">🚚</div><span>Fast Delivery</span></div>
+            <div class="hero-orb"><div class="icon">🛡️</div><span>2-Yr Warranty</span></div>
+            <div class="hero-orb"><div class="icon">💳</div><span>EMI Available</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-slide s3">
+      <div class="container">
+        <div class="hero-text">
+          <span class="tag">☁️ Business Solutions</span>
+          <h1>Servers, Cloud & <span>Security</span></h1>
+          <p>Complete IT infrastructure for growing businesses — servers, CCTV security, networking and managed cloud backup.</p>
+          <div class="hero-cta">
+            <a href="products.html?cat=server" class="btn btn-accent">Explore Business IT →</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-orb-grid">
+            <div class="hero-orb"><div class="icon">🗄️</div><span>Servers</span></div>
+            <div class="hero-orb"><div class="icon">📷</div><span>CCTV</span></div>
+            <div class="hero-orb"><div class="icon">☁️</div><span>Cloud Backup</span></div>
+            <div class="hero-orb"><div class="icon">🎧</div><span>24/7 Support</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="hero-arrow prev">‹</button>
+    <button class="hero-arrow next">›</button>
+    <div class="hero-dots">
+      <button class="active"></button><button></button><button></button>
+    </div>
   </section>
+
+  <!-- Quick category strip -->
+  <div class="quickcat-strip">
+    <div class="container">
+      <div class="quickcat-grid">
+        <a href="products.html?cat=desktop" class="quickcat-item"><div class="circle">🖥️</div><span>Desktop</span></a>
+        <a href="products.html?cat=laptop" class="quickcat-item"><div class="circle">💻</div><span>Laptop</span></a>
+        <a href="products.html?cat=monitor" class="quickcat-item"><div class="circle">🖼️</div><span>Monitor</span></a>
+        <a href="products.html?cat=networking" class="quickcat-item"><div class="circle">📡</div><span>Networking</span></a>
+        <a href="products.html?cat=camera" class="quickcat-item"><div class="circle">📷</div><span>Camera</span></a>
+        <a href="products.html?cat=software" class="quickcat-item"><div class="circle">🪟</div><span>Software</span></a>
+        <a href="products.html?cat=server" class="quickcat-item"><div class="circle">🗄️</div><span>Server</span></a>
+        <a href="products.html?cat=gaming" class="quickcat-item"><div class="circle">🎮</div><span>Gaming</span></a>
+        <a href="products.html?cat=tv" class="quickcat-item"><div class="circle">📺</div><span>TV</span></a>
+        <a href="products.html?cat=accessories" class="quickcat-item"><div class="circle">🎧</div><span>Accessories</span></a>
+      </div>
+    </div>
+  </div>
 
   <!-- Trust bar -->
   <div class="trust-bar">
     <div class="container">
-      <div class="trust-item"><span class="icon">🚚</span> Free shipping over $200</div>
-      <div class="trust-item"><span class="icon">🛡️</span> 2-Year Warranty</div>
-      <div class="trust-item"><span class="icon">💳</span> Secure Payments</div>
-      <div class="trust-item"><span class="icon">🎧</span> 24/7 Expert Support</div>
+      <div class="trust-item"><span class="icon">🚚</span> Nationwide Delivery</div>
+      <div class="trust-item"><span class="icon">🛡️</span> Official Warranty</div>
+      <div class="trust-item"><span class="icon">💳</span> EMI & Secure Payments</div>
+      <div class="trust-item"><span class="icon">🎧</span> 24/7 Support</div>
     </div>
   </div>
 
-  <!-- Categories -->
+  <!-- Featured Products -->
   <section>
     <div class="container">
       <div class="section-header">
-        <span class="eyebrow">Categories</span>
-        <h2>Shop by Category</h2>
-        <p>Everything your business needs to run, secure and scale its IT infrastructure.</p>
-      </div>
-      <div class="categories-grid">
-        <a href="products.html?cat=laptops" class="category-card"><div class="icon">💻</div><h3>Laptops</h3><p>Business & workstation</p></a>
-        <a href="products.html?cat=servers" class="category-card"><div class="icon">🖥️</div><h3>Servers & Storage</h3><p>Rack & tower servers</p></a>
-        <a href="products.html?cat=networking" class="category-card"><div class="icon">📡</div><h3>Networking</h3><p>Routers, switches, firewalls</p></a>
-        <a href="products.html?cat=software" class="category-card"><div class="icon">🪟</div><h3>Software</h3><p>Licenses & subscriptions</p></a>
-        <a href="products.html?cat=cloud" class="category-card"><div class="icon">☁️</div><h3>Cloud Services</h3><p>Hosting & backup</p></a>
-        <a href="products.html?cat=accessories" class="category-card"><div class="icon">🖱️</div><h3>Accessories</h3><p>Monitors, peripherals</p></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Products -->
-  <section style="background: var(--gray-100);">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">Handpicked</span>
+        <span class="eyebrow">Deals of the Day</span>
         <h2>Featured Products</h2>
-        <p>Popular picks trusted by businesses like yours.</p>
+        <p>Handpicked deals with the best savings, right now.</p>
       </div>
       <div class="products-grid" id="featured-products"></div>
-      <div style="text-align:center; margin-top: 40px;">
+      <div style="text-align:center; margin-top: 38px;">
         <a href="products.html" class="btn btn-primary">View All Products →</a>
       </div>
     </div>
   </section>
 
+  <!-- Store Locator Banner -->
+  <section style="padding-top:0;">
+    <div class="container">
+      <div class="store-banner">
+        <div class="left">
+          <div class="icon">📍</div>
+          <div>
+            <h3>Visit Our Physical Stores</h3>
+            <p>Touch, try, and buy in person — with expert staff ready to help.</p>
+          </div>
+        </div>
+        <div class="store-branch-list">
+          <span>Dhaka — Dhanmondi</span>
+          <span>Dhaka — Motijheel</span>
+          <span>Chattogram</span>
+          <span>Sylhet</span>
+          <span>Khulna</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Why Us -->
-  <section>
+  <section style="background: var(--gray-100);">
     <div class="container">
       <div class="section-header">
-        <span class="eyebrow">Why NexaTech</span>
-        <h2>Built for Business IT</h2>
-        <p>We combine product expertise with genuine support, so you buy right the first time.</p>
+        <span class="eyebrow">Why TekTrixa</span>
+        <h2>Bangladesh's Trusted Tech Partner</h2>
+        <p>We combine genuine products with real support, so you buy right the first time.</p>
       </div>
       <div class="why-us-grid">
-        <div class="why-card"><div class="icon">✅</div><h3>Genuine Products</h3><p>100% authentic hardware & licensed software with manufacturer warranty.</p></div>
-        <div class="why-card"><div class="icon">🚀</div><h3>Fast Deployment</h3><p>Pre-configuration & on-site setup available for bulk orders.</p></div>
-        <div class="why-card"><div class="icon">💬</div><h3>Expert Consultation</h3><p>Free technical consultation to match the right product to your needs.</p></div>
-        <div class="why-card"><div class="icon">🔧</div><h3>After-sales Support</h3><p>Dedicated support team for installation, troubleshooting & upgrades.</p></div>
+        <div class="why-card"><div class="icon">✅</div><h3>100% Genuine Products</h3><p>Authentic hardware & licensed software with full manufacturer warranty.</p></div>
+        <div class="why-card"><div class="icon">🚚</div><h3>Fast Nationwide Delivery</h3><p>Same-day delivery in Dhaka, 2–3 days across Bangladesh.</p></div>
+        <div class="why-card"><div class="icon">💬</div><h3>Free Consultation</h3><p>Talk to our experts before you buy — no pressure, just honest advice.</p></div>
+        <div class="why-card"><div class="icon">🔧</div><h3>After-Sales Support</h3><p>Dedicated service centers for installation, repair & upgrades.</p></div>
       </div>
     </div>
   </section>
 
   <!-- Testimonials -->
-  <section style="background: var(--gray-100);">
+  <section>
     <div class="container">
       <div class="section-header">
         <span class="eyebrow">Testimonials</span>
-        <h2>What Our Clients Say</h2>
+        <h2>What Our Customers Say</h2>
       </div>
       <div class="testimonials-grid">
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
-          <p class="quote">"NexaTech set up our entire office network and servers within a week. Professional and reliable."</p>
-          <div class="testimonial-author"><div class="avatar">R</div><div><strong>Rahim Uddin</strong><span>IT Manager, Dhaka</span></div></div>
+          <p class="quote">"Ordered a gaming laptop and it was delivered the next day. Genuine product with full warranty card."</p>
+          <div class="testimonial-author"><div class="avatar">R</div><div><strong>Rahim Uddin</strong><span>Dhaka</span></div></div>
         </div>
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
-          <p class="quote">"Great pricing on bulk laptop orders and genuinely helpful support after the sale."</p>
-          <div class="testimonial-author"><div class="avatar">S</div><div><strong>Sabrina Alam</strong><span>Operations Head</span></div></div>
+          <p class="quote">"Great pricing on bulk office PC orders, and their support team helped set everything up on-site."</p>
+          <div class="testimonial-author"><div class="avatar">S</div><div><strong>Sabrina Alam</strong><span>Chattogram</span></div></div>
         </div>
         <div class="testimonial-card">
           <div class="stars">★★★★☆</div>
-          <p class="quote">"Their cloud backup service saved us during a critical outage. Highly recommended."</p>
-          <div class="testimonial-author"><div class="avatar">K</div><div><strong>Kamal Hossain</strong><span>CTO, Startup</span></div></div>
+          <p class="quote">"Their CCTV and networking package for our shop was affordable and installed within a week."</p>
+          <div class="testimonial-author"><div class="avatar">K</div><div><strong>Kamal Hossain</strong><span>Sylhet</span></div></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Newsletter CTA -->
-  <section>
+  <section style="padding-top:0;">
     <div class="container">
       <div class="cta-banner">
-        <h2>Get Deals & IT Tips in Your Inbox</h2>
-        <p>Subscribe for exclusive discounts on servers, laptops & cloud services.</p>
+        <h2>Get Exclusive Deals in Your Inbox</h2>
+        <p>Subscribe for early access to flash sales, new arrivals & gift offers.</p>
         <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
           <input type="email" placeholder="Enter your email address" required />
           <button type="submit" class="btn btn-primary">Subscribe</button>
@@ -189,11 +266,10 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-about">
-          <div class="logo"><span class="logo-mark">NT</span> NexaTech Solutions</div>
-          <p>Your trusted partner for enterprise IT products — laptops, servers, networking, software and cloud services.</p>
-          <div class="social-links">
-            <a href="#">📘</a><a href="#">🐦</a><a href="#">💼</a><a href="#">📷</a>
-          </div>
+          <div class="logo"><span class="logo-mark">TX</span> TekTrixa</div>
+          <p>Your trusted IT product partner in Bangladesh — desktops, laptops, networking, software, servers & more.</p>
+          <div class="social-links"><a href="#">📘</a><a href="#">🐦</a><a href="#">💼</a><a href="#">📷</a></div>
+          <div class="payment-badges"><span>💳 Visa</span><span>💳 Mastercard</span><span>📱 bKash</span><span>📱 Nagad</span><span>💵 COD</span></div>
         </div>
         <div>
           <h4>Quick Links</h4>
@@ -207,29 +283,26 @@
         <div>
           <h4>Categories</h4>
           <ul>
-            <li><a href="products.html?cat=laptops">Laptops</a></li>
-            <li><a href="products.html?cat=servers">Servers</a></li>
+            <li><a href="products.html?cat=laptop">Laptop</a></li>
+            <li><a href="products.html?cat=desktop">Desktop PC</a></li>
             <li><a href="products.html?cat=networking">Networking</a></li>
-            <li><a href="products.html?cat=cloud">Cloud Services</a></li>
+            <li><a href="products.html?cat=server">Server & Storage</a></li>
           </ul>
         </div>
         <div class="footer-contact">
           <h4>Contact Us</h4>
           <ul>
-            <li>📍 <span>House 12, Road 5, Gulshan, Dhaka, Bangladesh</span></li>
+            <li>📍 <span>House 12, Road 5, Dhanmondi, Dhaka, Bangladesh</span></li>
             <li>📞 <span>+880 1XXX-XXXXXX</span></li>
-            <li>✉️ <span>sales@yourcompany.com</span></li>
+            <li>✉️ <span>sales@tektrixa.com</span></li>
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        © <span id="year"></span> NexaTech Solutions. All rights reserved. | Built with ❤️ for modern IT businesses.
-      </div>
+      <div class="footer-bottom">© <span id="year"></span> TekTrixa. All rights reserved.</div>
     </div>
   </footer>
 
   <div class="toast" id="toast"></div>
-
   <script src="js/script.js"></script>
 </body>
 </html>

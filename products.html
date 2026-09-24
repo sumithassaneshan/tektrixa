@@ -3,35 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>All Products | NexaTech Solutions</title>
-  <meta name="description" content="Browse our full catalog of laptops, servers, networking equipment, software licenses, cloud services and accessories." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>" />
+  <title>All Products | TekTrixa</title>
+  <meta name="description" content="Browse TekTrixa's full catalog — desktops, laptops, monitors, networking, software, servers, gaming, TVs and accessories." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
   <div class="top-bar">
     <div class="container">
-      <div><span>📞 +880 1XXX-XXXXXX</span><span>✉️ sales@yourcompany.com</span></div>
-      <div><span>🚚 Free shipping on orders over $200</span></div>
+      <div class="tb-left">
+        <span>📞 +880 1XXX-XXXXXX</span>
+        <span>✉️ sales@tektrixa.com</span>
+        <span>🚚 Free delivery inside Dhaka on orders over ৳5,000</span>
+      </div>
+      <div class="tb-right">
+        <a href="contact.html">Track Order</a>
+        <a href="contact.html">Store Locator</a>
+        <a href="contact.html">Help</a>
+      </div>
     </div>
   </div>
 
   <header class="navbar">
     <div class="container">
-      <a href="index.html" class="logo"><span class="logo-mark">NT</span> NexaTech Solutions</a>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="products.html" class="active">Products</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <a href="index.html" class="logo"><span class="logo-mark">TX</span> TekTrixa</a>
+      <div class="navbar-search">
+        <input type="text" placeholder="Search for laptops, desktops, routers..." class="site-search" />
+        <button onclick="document.querySelector('.site-search').dispatchEvent(new Event('input'))">🔍</button>
+      </div>
       <div class="nav-actions">
-        <div class="search-box">
-          <span>🔍</span>
-          <input type="text" placeholder="Search products..." class="site-search" />
-        </div>
-        <a href="cart.html" class="cart-link">🛒<span class="cart-count">0</span></a>
+        <a href="about.html" class="nav-action-item"><span class="icon">👤</span>Account</a>
+        <a href="cart.html" class="nav-action-item"><span class="icon">🛒</span>Cart<span class="cart-count">0</span></a>
         <button class="hamburger" onclick="toggleMobileNav()">☰</button>
       </div>
     </div>
@@ -43,6 +46,24 @@
       <a href="cart.html">Cart</a>
     </div>
   </header>
+
+  <nav class="category-nav">
+    <div class="container">
+      <div class="cat-nav-toggle">☰ All Categories</div>
+      <div class="cat-nav-links">
+        <a href="products.html?cat=desktop">🖥️ Desktop</a>
+        <a href="products.html?cat=laptop">💻 Laptop</a>
+        <a href="products.html?cat=monitor">🖼️ Monitor</a>
+        <a href="products.html?cat=networking">📡 Networking</a>
+        <a href="products.html?cat=camera">📷 Camera & Security</a>
+        <a href="products.html?cat=software">🪟 Software</a>
+        <a href="products.html?cat=server">🗄️ Server & Storage</a>
+        <a href="products.html?cat=gaming">🎮 Gaming</a>
+        <a href="products.html?cat=tv">📺 TV & Appliance</a>
+        <a href="products.html?cat=accessories">🎧 Accessories</a>
+      </div>
+    </div>
+  </nav>
 
   <div class="page-header">
     <div class="container">
@@ -56,11 +77,15 @@
       <div class="products-toolbar">
         <div class="filter-tabs">
           <button data-filter="all" class="active">All</button>
-          <button data-filter="laptops">Laptops</button>
-          <button data-filter="servers">Servers & Storage</button>
+          <button data-filter="desktop">Desktop</button>
+          <button data-filter="laptop">Laptop</button>
+          <button data-filter="monitor">Monitor</button>
           <button data-filter="networking">Networking</button>
+          <button data-filter="camera">Camera & Security</button>
           <button data-filter="software">Software</button>
-          <button data-filter="cloud">Cloud Services</button>
+          <button data-filter="server">Server & Storage</button>
+          <button data-filter="gaming">Gaming</button>
+          <button data-filter="tv">TV & Appliance</button>
           <button data-filter="accessories">Accessories</button>
         </div>
         <select class="sort-select" id="sort-select">
@@ -78,9 +103,10 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-about">
-          <div class="logo"><span class="logo-mark">NT</span> NexaTech Solutions</div>
-          <p>Your trusted partner for enterprise IT products — laptops, servers, networking, software and cloud services.</p>
+          <div class="logo"><span class="logo-mark">TX</span> TekTrixa</div>
+          <p>Your trusted IT product partner in Bangladesh.</p>
           <div class="social-links"><a href="#">📘</a><a href="#">🐦</a><a href="#">💼</a><a href="#">📷</a></div>
+          <div class="payment-badges"><span>💳 Visa</span><span>💳 Mastercard</span><span>📱 bKash</span><span>📱 Nagad</span><span>💵 COD</span></div>
         </div>
         <div>
           <h4>Quick Links</h4>
@@ -94,30 +120,28 @@
         <div>
           <h4>Categories</h4>
           <ul>
-            <li><a href="products.html?cat=laptops">Laptops</a></li>
-            <li><a href="products.html?cat=servers">Servers</a></li>
+            <li><a href="products.html?cat=laptop">Laptop</a></li>
+            <li><a href="products.html?cat=desktop">Desktop PC</a></li>
             <li><a href="products.html?cat=networking">Networking</a></li>
-            <li><a href="products.html?cat=cloud">Cloud Services</a></li>
+            <li><a href="products.html?cat=server">Server & Storage</a></li>
           </ul>
         </div>
         <div class="footer-contact">
           <h4>Contact Us</h4>
           <ul>
-            <li>📍 <span>House 12, Road 5, Gulshan, Dhaka, Bangladesh</span></li>
+            <li>📍 <span>House 12, Road 5, Dhanmondi, Dhaka, Bangladesh</span></li>
             <li>📞 <span>+880 1XXX-XXXXXX</span></li>
-            <li>✉️ <span>sales@yourcompany.com</span></li>
+            <li>✉️ <span>sales@tektrixa.com</span></li>
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">© <span id="year"></span> NexaTech Solutions. All rights reserved.</div>
+      <div class="footer-bottom">© <span id="year"></span> TekTrixa. All rights reserved.</div>
     </div>
   </footer>
 
   <div class="toast" id="toast"></div>
-
   <script src="js/script.js"></script>
   <script>
-    // Support ?cat=xxx and ?q=xxx query params from links on other pages
     (function () {
       const params = new URLSearchParams(window.location.search);
       const cat = params.get("cat");

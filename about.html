@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Cart | TekTrixa</title>
+  <title>About Us | TekTrixa</title>
+  <meta name="description" content="Learn about TekTrixa — Bangladesh's trusted IT product retailer, our mission, our team, and our store locations." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -48,39 +49,76 @@
 
   <div class="page-header">
     <div class="container">
-      <h1>Your Shopping Cart</h1>
-      <div class="breadcrumb"><a href="index.html">Home</a> / Cart</div>
+      <h1>About TekTrixa</h1>
+      <div class="breadcrumb"><a href="index.html">Home</a> / About</div>
     </div>
   </div>
 
   <section>
     <div class="container">
-
-      <div class="empty-cart" id="empty-cart-state" style="display:none;">
-        <div class="icon">🛒</div>
-        <h2>Your cart is empty</h2>
-        <p>Looks like you haven't added anything yet. Explore our products and find what you need.</p>
-        <a href="products.html" class="btn btn-primary">Browse Products</a>
-      </div>
-
-      <div class="cart-wrap" id="cart-content">
-        <div>
-          <table class="cart-table">
-            <thead><tr><th>Product</th><th>Price</th><th>Quantity</th><th>Subtotal</th><th></th></tr></thead>
-            <tbody id="cart-items-body"></tbody>
-          </table>
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="stat-box">
+            <div class="card"><strong>10+</strong><span>Years in Business</span></div>
+            <div class="card"><strong>500+</strong><span>Business Clients</span></div>
+            <div class="card"><strong>1,200+</strong><span>Products Delivered</span></div>
+            <div class="card"><strong>5</strong><span>Physical Stores</span></div>
+          </div>
         </div>
-        <div class="summary-card">
-          <h3>Order Summary</h3>
-          <div class="summary-row"><span>Subtotal</span><span id="cart-subtotal">৳0</span></div>
-          <div class="summary-row"><span>Delivery Charge</span><span id="cart-shipping">৳0</span></div>
-          <div class="summary-row total"><span>Total</span><span id="cart-total">৳0</span></div>
-          <a href="#" id="checkout-whatsapp-btn" class="btn btn-accent btn-block" style="margin-top:20px;" target="_blank">🟢 Checkout via WhatsApp</a>
-          <a href="#" id="checkout-email-btn" class="btn btn-primary btn-block" style="margin-top:12px;">✉️ Checkout via Email</a>
-          <p class="form-note">This is a demo storefront: orders are sent directly to our team via WhatsApp/Email for confirmation — payment via bKash, Nagad, bank transfer or Cash on Delivery.</p>
+        <div class="about-text">
+          <h2>Your Trusted IT Product Partner in Bangladesh</h2>
+          <p>TekTrixa started with a simple goal: make it easy for people and businesses across Bangladesh to buy genuine, reliable IT hardware and software — without the guesswork.</p>
+          <p>Today we supply desktops, laptops, networking equipment, software licenses, servers, gaming gear, and smart appliances to customers ranging from individual gamers to established enterprises, backed by real technical support before and after every sale.</p>
+          <ul class="mission-list">
+            <li><span class="icon">✔️</span> <span>100% genuine, manufacturer-warrantied products</span></li>
+            <li><span class="icon">✔️</span> <span>Free technical consultation before you buy</span></li>
+            <li><span class="icon">✔️</span> <span>Nationwide delivery & on-site setup for bulk orders</span></li>
+            <li><span class="icon">✔️</span> <span>Dedicated after-sales support & service centers</span></li>
+          </ul>
         </div>
       </div>
+    </div>
+  </section>
 
+  <section style="background: var(--gray-100);">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Our Team</span>
+        <h2>Meet the People Behind TekTrixa</h2>
+      </div>
+      <div class="team-grid">
+        <div class="team-card"><div class="avatar">A</div><h3>Ahsan Kabir</h3><span>Founder & CEO</span></div>
+        <div class="team-card"><div class="avatar">M</div><h3>Maria Islam</h3><span>Head of Sales</span></div>
+        <div class="team-card"><div class="avatar">T</div><h3>Tanvir Rahman</h3><span>Lead Systems Engineer</span></div>
+        <div class="team-card"><div class="avatar">N</div><h3>Nadia Hoque</h3><span>Customer Support Lead</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Store Locator</span>
+        <h2>Visit Our Branches</h2>
+        <p>Touch, try, and buy in person at any of our stores across Bangladesh.</p>
+      </div>
+      <div class="branch-grid">
+        <div class="branch-card"><h4>📍 Dhanmondi, Dhaka</h4><p>House 12, Road 5, Dhanmondi</p><p>Open: Sat–Thu, 10 AM – 8 PM</p></div>
+        <div class="branch-card"><h4>📍 Motijheel, Dhaka</h4><p>IDB Bhaban, Level 3, Motijheel</p><p>Open: Sat–Thu, 10 AM – 8 PM</p></div>
+        <div class="branch-card"><h4>📍 Chattogram</h4><p>GEC Circle, Chattogram</p><p>Open: Sat–Thu, 10 AM – 7 PM</p></div>
+        <div class="branch-card"><h4>📍 Sylhet</h4><p>Zindabazar, Sylhet</p><p>Open: Sat–Thu, 10 AM – 7 PM</p></div>
+        <div class="branch-card"><h4>📍 Khulna</h4><p>KDA Avenue, Khulna</p><p>Open: Sat–Thu, 10 AM – 7 PM</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Ready to Upgrade Your Tech?</h2>
+        <p>Talk to our team for a free consultation and custom quote.</p>
+        <a href="contact.html" class="btn btn-primary">Contact Us Today</a>
+      </div>
     </div>
   </section>
 
