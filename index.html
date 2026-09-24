@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NexaTech Solutions | IT Products, Servers & Cloud Services</title>
+  <meta name="description" content="Shop laptops, servers, networking gear, software licenses and cloud services from NexaTech Solutions — trusted IT products for business." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div>
+        <span>📞 +880 1XXX-XXXXXX</span>
+        <span>✉️ sales@yourcompany.com</span>
+      </div>
+      <div>
+        <span>🚚 Free shipping on orders over $200</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">NT</span> NexaTech Solutions
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="search-box">
+          <span>🔍</span>
+          <input type="text" placeholder="Search products..." class="site-search" onkeydown="if(event.key==='Enter'){window.location.href='products.html?q='+encodeURIComponent(this.value)}" />
+        </div>
+        <a href="cart.html" class="cart-link">🛒<span class="cart-count">0</span></a>
+        <button class="hamburger" onclick="toggleMobileNav()">☰</button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-text">
+        <span class="tag">✨ Trusted IT Partner Since 2015</span>
+        <h1>Enterprise IT Products, <span>Delivered Fast.</span></h1>
+        <p>Laptops, servers, networking gear, software licenses and cloud services — everything your business needs, backed by expert support.</p>
+        <div class="hero-cta">
+          <a href="products.html" class="btn btn-accent">Shop Products →</a>
+          <a href="contact.html" class="btn btn-outline">Talk to Sales</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>1,200+</strong><span>Products Delivered</span></div>
+          <div><strong>500+</strong><span>Business Clients</span></div>
+          <div><strong>10+</strong><span>Years Experience</span></div>
+          <div><strong>24/7</strong><span>Support</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="mini-icon-box"><div class="icon">💻</div><span>Laptops</span></div>
+          <div class="mini-icon-box"><div class="icon">🖥️</div><span>Servers</span></div>
+          <div class="mini-icon-box"><div class="icon">📡</div><span>Networking</span></div>
+          <div class="mini-icon-box"><div class="icon">☁️</div><span>Cloud</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust bar -->
+  <div class="trust-bar">
+    <div class="container">
+      <div class="trust-item"><span class="icon">🚚</span> Free shipping over $200</div>
+      <div class="trust-item"><span class="icon">🛡️</span> 2-Year Warranty</div>
+      <div class="trust-item"><span class="icon">💳</span> Secure Payments</div>
+      <div class="trust-item"><span class="icon">🎧</span> 24/7 Expert Support</div>
+    </div>
+  </div>
+
+  <!-- Categories -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Categories</span>
+        <h2>Shop by Category</h2>
+        <p>Everything your business needs to run, secure and scale its IT infrastructure.</p>
+      </div>
+      <div class="categories-grid">
+        <a href="products.html?cat=laptops" class="category-card"><div class="icon">💻</div><h3>Laptops</h3><p>Business & workstation</p></a>
+        <a href="products.html?cat=servers" class="category-card"><div class="icon">🖥️</div><h3>Servers & Storage</h3><p>Rack & tower servers</p></a>
+        <a href="products.html?cat=networking" class="category-card"><div class="icon">📡</div><h3>Networking</h3><p>Routers, switches, firewalls</p></a>
+        <a href="products.html?cat=software" class="category-card"><div class="icon">🪟</div><h3>Software</h3><p>Licenses & subscriptions</p></a>
+        <a href="products.html?cat=cloud" class="category-card"><div class="icon">☁️</div><h3>Cloud Services</h3><p>Hosting & backup</p></a>
+        <a href="products.html?cat=accessories" class="category-card"><div class="icon">🖱️</div><h3>Accessories</h3><p>Monitors, peripherals</p></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section style="background: var(--gray-100);">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Handpicked</span>
+        <h2>Featured Products</h2>
+        <p>Popular picks trusted by businesses like yours.</p>
+      </div>
+      <div class="products-grid" id="featured-products"></div>
+      <div style="text-align:center; margin-top: 40px;">
+        <a href="products.html" class="btn btn-primary">View All Products →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Why NexaTech</span>
+        <h2>Built for Business IT</h2>
+        <p>We combine product expertise with genuine support, so you buy right the first time.</p>
+      </div>
+      <div class="why-us-grid">
+        <div class="why-card"><div class="icon">✅</div><h3>Genuine Products</h3><p>100% authentic hardware & licensed software with manufacturer warranty.</p></div>
+        <div class="why-card"><div class="icon">🚀</div><h3>Fast Deployment</h3><p>Pre-configuration & on-site setup available for bulk orders.</p></div>
+        <div class="why-card"><div class="icon">💬</div><h3>Expert Consultation</h3><p>Free technical consultation to match the right product to your needs.</p></div>
+        <div class="why-card"><div class="icon">🔧</div><h3>After-sales Support</h3><p>Dedicated support team for installation, troubleshooting & upgrades.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section style="background: var(--gray-100);">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Testimonials</span>
+        <h2>What Our Clients Say</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"NexaTech set up our entire office network and servers within a week. Professional and reliable."</p>
+          <div class="testimonial-author"><div class="avatar">R</div><div><strong>Rahim Uddin</strong><span>IT Manager, Dhaka</span></div></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Great pricing on bulk laptop orders and genuinely helpful support after the sale."</p>
+          <div class="testimonial-author"><div class="avatar">S</div><div><strong>Sabrina Alam</strong><span>Operations Head</span></div></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★☆</div>
+          <p class="quote">"Their cloud backup service saved us during a critical outage. Highly recommended."</p>
+          <div class="testimonial-author"><div class="avatar">K</div><div><strong>Kamal Hossain</strong><span>CTO, Startup</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section>
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Get Deals & IT Tips in Your Inbox</h2>
+        <p>Subscribe for exclusive discounts on servers, laptops & cloud services.</p>
+        <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+          <input type="email" placeholder="Enter your email address" required />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="logo"><span class="logo-mark">NT</span> NexaTech Solutions</div>
+          <p>Your trusted partner for enterprise IT products — laptops, servers, networking, software and cloud services.</p>
+          <div class="social-links">
+            <a href="#">📘</a><a href="#">🐦</a><a href="#">💼</a><a href="#">📷</a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="products.html?cat=laptops">Laptops</a></li>
+            <li><a href="products.html?cat=servers">Servers</a></li>
+            <li><a href="products.html?cat=networking">Networking</a></li>
+            <li><a href="products.html?cat=cloud">Cloud Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>📍 <span>House 12, Road 5, Gulshan, Dhaka, Bangladesh</span></li>
+            <li>📞 <span>+880 1XXX-XXXXXX</span></li>
+            <li>✉️ <span>sales@yourcompany.com</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © <span id="year"></span> NexaTech Solutions. All rights reserved. | Built with ❤️ for modern IT businesses.
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

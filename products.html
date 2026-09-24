@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Products | NexaTech Solutions</title>
+  <meta name="description" content="Browse our full catalog of laptops, servers, networking equipment, software licenses, cloud services and accessories." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="container">
+      <div><span>📞 +880 1XXX-XXXXXX</span><span>✉️ sales@yourcompany.com</span></div>
+      <div><span>🚚 Free shipping on orders over $200</span></div>
+    </div>
+  </div>
+
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo"><span class="logo-mark">NT</span> NexaTech Solutions</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="search-box">
+          <span>🔍</span>
+          <input type="text" placeholder="Search products..." class="site-search" />
+        </div>
+        <a href="cart.html" class="cart-link">🛒<span class="cart-count">0</span></a>
+        <button class="hamburger" onclick="toggleMobileNav()">☰</button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart</a>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>All Products</h1>
+      <div class="breadcrumb"><a href="index.html">Home</a> / Products</div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="products-toolbar">
+        <div class="filter-tabs">
+          <button data-filter="all" class="active">All</button>
+          <button data-filter="laptops">Laptops</button>
+          <button data-filter="servers">Servers & Storage</button>
+          <button data-filter="networking">Networking</button>
+          <button data-filter="software">Software</button>
+          <button data-filter="cloud">Cloud Services</button>
+          <button data-filter="accessories">Accessories</button>
+        </div>
+        <select class="sort-select" id="sort-select">
+          <option value="default">Sort: Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="rating">Highest Rated</option>
+        </select>
+      </div>
+      <div class="products-grid" id="all-products"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="logo"><span class="logo-mark">NT</span> NexaTech Solutions</div>
+          <p>Your trusted partner for enterprise IT products — laptops, servers, networking, software and cloud services.</p>
+          <div class="social-links"><a href="#">📘</a><a href="#">🐦</a><a href="#">💼</a><a href="#">📷</a></div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="products.html?cat=laptops">Laptops</a></li>
+            <li><a href="products.html?cat=servers">Servers</a></li>
+            <li><a href="products.html?cat=networking">Networking</a></li>
+            <li><a href="products.html?cat=cloud">Cloud Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>📍 <span>House 12, Road 5, Gulshan, Dhaka, Bangladesh</span></li>
+            <li>📞 <span>+880 1XXX-XXXXXX</span></li>
+            <li>✉️ <span>sales@yourcompany.com</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© <span id="year"></span> NexaTech Solutions. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Support ?cat=xxx and ?q=xxx query params from links on other pages
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const cat = params.get("cat");
+      const q = params.get("q");
+      window.addEventListener("DOMContentLoaded", () => {
+        if (cat) {
+          const btn = document.querySelector(`.filter-tabs button[data-filter="${cat}"]`);
+          if (btn) btn.click();
+        }
+        if (q) {
+          document.querySelectorAll(".site-search").forEach((input) => (input.value = q));
+          currentSearch = q;
+          applyProductFilters();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

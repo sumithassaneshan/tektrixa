@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | NexaTech Solutions</title>
+  <meta name="description" content="Get in touch with NexaTech Solutions for quotes, technical consultation, and IT product orders." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="container">
+      <div><span>📞 +880 1XXX-XXXXXX</span><span>✉️ sales@yourcompany.com</span></div>
+      <div><span>🚚 Free shipping on orders over $200</span></div>
+    </div>
+  </div>
+
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo"><span class="logo-mark">NT</span> NexaTech Solutions</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="search-box"><span>🔍</span><input type="text" placeholder="Search products..." class="site-search" onkeydown="if(event.key==='Enter'){window.location.href='products.html?q='+encodeURIComponent(this.value)}" /></div>
+        <a href="cart.html" class="cart-link">🛒<span class="cart-count">0</span></a>
+        <button class="hamburger" onclick="toggleMobileNav()">☰</button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart</a>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Get in Touch</h1>
+      <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="contact-wrap">
+        <div class="contact-info-card">
+          <div class="item">
+            <div class="icon">📍</div>
+            <div><h4>Our Office</h4><p>House 12, Road 5, Gulshan, Dhaka, Bangladesh</p></div>
+          </div>
+          <div class="item">
+            <div class="icon">📞</div>
+            <div><h4>Phone</h4><a href="tel:+8801XXXXXXXXX">+880 1XXX-XXXXXX</a></div>
+          </div>
+          <div class="item">
+            <div class="icon">✉️</div>
+            <div><h4>Email</h4><a href="mailto:sales@yourcompany.com">sales@yourcompany.com</a></div>
+          </div>
+          <div class="item">
+            <div class="icon">🕐</div>
+            <div><h4>Business Hours</h4><p>Sat–Thu: 9:00 AM – 7:00 PM</p></div>
+          </div>
+          <div class="map-box">
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=90.40%2C23.77%2C90.43%2C23.79&layer=mapnik" width="100%" height="100%" style="border:0;" loading="lazy"></iframe>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <h3 style="font-size:20px; margin-bottom:20px;">Send Us a Message</h3>
+          <form onsubmit="handleContactSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" required placeholder="Your name" />
+              </div>
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" required placeholder="+880 1XXX-XXXXXX" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" required placeholder="you@company.com" />
+              </div>
+              <div class="form-group">
+                <label>Interested In</label>
+                <select>
+                  <option>Laptops</option>
+                  <option>Servers & Storage</option>
+                  <option>Networking</option>
+                  <option>Software Licenses</option>
+                  <option>Cloud Services</option>
+                  <option>Other / General Inquiry</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea rows="5" required placeholder="Tell us what you need..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            <p class="form-note">Note: this is a static demo form. To receive real submissions by email, connect it to a free service like Formspree, Getform, or EmailJS — see the README for setup steps.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="logo"><span class="logo-mark">NT</span> NexaTech Solutions</div>
+          <p>Your trusted partner for enterprise IT products.</p>
+          <div class="social-links"><a href="#">📘</a><a href="#">🐦</a><a href="#">💼</a><a href="#">📷</a></div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="products.html?cat=laptops">Laptops</a></li>
+            <li><a href="products.html?cat=servers">Servers</a></li>
+            <li><a href="products.html?cat=networking">Networking</a></li>
+            <li><a href="products.html?cat=cloud">Cloud Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>📍 <span>House 12, Road 5, Gulshan, Dhaka, Bangladesh</span></li>
+            <li>📞 <span>+880 1XXX-XXXXXX</span></li>
+            <li>✉️ <span>sales@yourcompany.com</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© <span id="year"></span> NexaTech Solutions. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
