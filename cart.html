@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart | TekTrixa</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="container">
+      <div class="tb-left">
+        <span>📞 +880 1XXX-XXXXXX</span>
+        <span>✉️ sales@tektrixa.com</span>
+        <span>⚡ Instant digital delivery on all licenses & domains</span>
+      </div>
+      <div class="tb-right">
+        <a href="contact.html">Track Order</a>
+        <a href="contact.html">Get a Quote</a>
+        <a href="contact.html">Help</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo"><span class="logo-mark">TX</span> TekTrixa</a>
+      <div class="navbar-search">
+        <input type="text" placeholder="Search domains, hosting, software..." class="site-search" onkeydown="if(event.key==='Enter'){window.location.href='products.html?q='+encodeURIComponent(this.value)}" />
+        <button onclick="window.location.href='products.html?q='+encodeURIComponent(document.querySelector('.navbar-search input').value)">🔍</button>
+      </div>
+      <div class="nav-actions">
+        <a href="about.html" class="nav-action-item"><span class="icon">👤</span>Account</a>
+        <a href="cart.html" class="nav-action-item"><span class="icon">🛒</span>Cart<span class="cart-count">0</span></a>
+        <button class="hamburger" onclick="toggleMobileNav()">☰</button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart</a>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Your Shopping Cart</h1>
+      <div class="breadcrumb"><a href="index.html">Home</a> / Cart</div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+
+      <div class="empty-cart" id="empty-cart-state" style="display:none;">
+        <div class="icon">🛒</div>
+        <h2>Your cart is empty</h2>
+        <p>Looks like you haven't added anything yet. Explore our products and services.</p>
+        <a href="products.html" class="btn btn-primary">Browse Products</a>
+      </div>
+
+      <div class="cart-wrap" id="cart-content">
+        <div>
+          <table class="cart-table">
+            <thead><tr><th>Product / Service</th><th>Price</th><th>Quantity</th><th>Subtotal</th><th></th></tr></thead>
+            <tbody id="cart-items-body"></tbody>
+          </table>
+        </div>
+        <div class="summary-card">
+          <h3>Order Summary</h3>
+          <div class="summary-row"><span>Subtotal</span><span id="cart-subtotal">৳0</span></div>
+          <div class="summary-row total"><span>Estimated Total</span><span id="cart-total">৳0</span></div>
+          <a href="#" id="checkout-whatsapp-btn" class="btn btn-accent btn-block" style="margin-top:20px;" target="_blank">🟢 Checkout via WhatsApp</a>
+          <a href="#" id="checkout-email-btn" class="btn btn-primary btn-block" style="margin-top:12px;">✉️ Checkout via Email</a>
+          <p class="form-note">This is a demo storefront: orders/quote requests are sent directly to our team via WhatsApp or Email for confirmation. Note: subscription items (e.g. "/year", "/month") are billed per the term shown — quantity represents number of licenses/units. Final invoice will reflect your confirmed term and quantity. Payment via bKash, Nagad, bank transfer or card.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="logo"><span class="logo-mark">TX</span> TekTrixa</div>
+          <p>Your trusted domain, hosting, cloud storage, software & IT services partner in Bangladesh.</p>
+          <div class="social-links"><a href="#">📘</a><a href="#">🐦</a><a href="#">💼</a><a href="#">📷</a></div>
+          <div class="payment-badges"><span>💳 Visa</span><span>💳 Mastercard</span><span>📱 bKash</span><span>📱 Nagad</span><span>🏦 Bank Transfer</span></div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="products.html?cat=domain">Domain</a></li>
+            <li><a href="products.html?cat=hosting">Hosting</a></li>
+            <li><a href="products.html?cat=cloudstorage">Cloud Storage</a></li>
+            <li><a href="products.html?cat=software">Software</a></li>
+            <li><a href="products.html?cat=accessories">Accessories</a></li>
+            <li><a href="products.html?cat=itservices">Cloud & IT Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>📍 <span>House 12, Road 5, Dhanmondi, Dhaka, Bangladesh</span></li>
+            <li>📞 <span>+880 1XXX-XXXXXX</span></li>
+            <li>✉️ <span>sales@tektrixa.com</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© <span id="year"></span> TekTrixa. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
