@@ -1,5 +1,5 @@
 /* ==========================================================================
-   TekTrixa — Microsoft 365, Google Workspace, Domains, Hosting & IT Services
+   TekTrixa — Domains, Hosting, Cloud Storage, Software & IT Services
    Global Stylesheet
    ========================================================================== */
 
@@ -75,77 +75,80 @@ section { padding: 64px 0; }
 .top-bar .tb-right a:hover { color: var(--accent); }
 
 /* ---------- Navbar (search + actions) ---------- */
-
+/* Flex order below controls left-to-right visual placement:
+   nav-actions (Account/Cart) = order -1  -> appears FIRST (far left)
+   logo                        = order 0  -> appears second
+   navbar-search                = order 0  -> appears last, fills remaining space */
 .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 200;
-    background: var(--white);
-    box-shadow: 0 1px 0 var(--gray-300);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: var(--white);
+  box-shadow: 0 1px 0 var(--gray-300);
 }
 
 .navbar .container {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    padding-top: 16px;
-    padding-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-top: 16px;
+  padding-bottom: 14px;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 23px;
-    font-weight: 800;
-    color: var(--primary);
-    flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 23px;
+  font-weight: 800;
+  color: var(--primary);
+  flex-shrink: 0;
 }
 
 .logo .logo-mark {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-size: 17px;
-    font-weight: 800;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 17px;
+  font-weight: 800;
 }
 
 .navbar-search {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    background: var(--gray-100);
-    border: 1px solid var(--gray-300);
-    border-radius: 999px;
-    padding: 4px 4px 4px 18px;
-    max-width: 520px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: var(--gray-100);
+  border: 1px solid var(--gray-300);
+  border-radius: 999px;
+  padding: 4px 4px 4px 18px;
+  max-width: 520px;
 }
 
 .navbar-search input {
-    flex: 1;
-    border: none;
-    background: transparent;
-    outline: none;
-    font-size: 14px;
-    padding: 8px 0;
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  padding: 8px 0;
 }
 
 .navbar-search button {
-    background: var(--accent);
-    color: var(--white);
-    width: 38px;
-    height: 38px;
-    border-radius: 999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    flex-shrink: 0;
+  background: var(--accent);
+  color: var(--white);
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
 }
 
 .nav-actions {
@@ -153,44 +156,44 @@ section { padding: 64px 0; }
   align-items: center;
   gap: 22px;
   flex-shrink: 0;
-  margin-left: auto;
+  margin-left: auto; /* keeps Account + Cart on the RIGHT side of the navbar */
 }
 
 .nav-action-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 11px;
-    color: var(--gray-700);
-    position: relative;
-    font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  color: var(--gray-700);
+  position: relative;
+  font-weight: 600;
 }
 
 .nav-action-item .icon {
-    font-size: 21px;
-    margin-bottom: 2px;
+  font-size: 21px;
+  margin-bottom: 2px;
 }
 
 .cart-count {
-    position: absolute;
-    top: -6px;
-    right: -12px;
-    background: var(--accent);
-    color: var(--white);
-    font-size: 10.5px;
-    font-weight: 700;
-    min-width: 17px;
-    height: 17px;
-    border-radius: 999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 4px;
+  position: absolute;
+  top: -6px;
+  right: -12px;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 10.5px;
+  font-weight: 700;
+  min-width: 17px;
+  height: 17px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
 }
 
 .hamburger {
-    display: none;
-    font-size: 26px;
+  display: none;
+  font-size: 26px;
 }
 
 /* ---------- Mega Category Nav ---------- */
