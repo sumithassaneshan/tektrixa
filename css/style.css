@@ -149,11 +149,11 @@ section { padding: 64px 0; }
 }
 
 .nav-actions {
-display: flex;
-align-items: center;
-gap: 22px;
-flex-shrink: 0;
-order: -1; 
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-shrink: 0;
+  margin-left: auto;
 }
 
 .nav-action-item {
